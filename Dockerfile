@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM FROM amazoncorretto:17
 WORKDIR /app
 COPY build/libs/springboot-mysql-eks.jar /app
 EXPOSE 8080
