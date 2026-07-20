@@ -3,39 +3,40 @@ kind: ClusterConfig
 
 metadata:
   name: spring-test-cluster
-  region: ap-southeast-2
-  version: "1.27"
+  region: ap-south-1
+  version: "1.30"
 
 vpc:
-  id: "vpc-id"
+  id: "vpc-0d8fd2a1689802dad"
   subnets:
     private:
-      ap-southeast-2a:
-        id: "subnet-01"
-      ap-southeast-2b:
-        id: "subnet-02"
+      ap-south-1a:
+        id: "subnet-058c6387214018313"
+      ap-south-1b:
+        id: "subnet-0913ef7a160140349"
     public:
-      ap-southeast-2a:
-        id: "subnet-03"
-      ap-southeast-2b:
-        id: "subnet-04"
+      ap-south-1a:
+        id: "subnet-0ee25220639880092"
+      ap-south-1b:
+        id: "subnet-0dfbaa9dfae282d68"
 
-nodeGroups:
+managedNodeGroups:
   - name: ng-1
-    labels: { role: backend }
-    instanceType: t2.micro
+    labels: { role: worker }
+    instanceType: t3.medium
     desiredCapacity: 3
     minSize: 3
     maxSize: 5
     privateNetworking: true
     ssh:
       allow: true
-      publicKeyName: ec2-yt-key
+      publicKeyName: ec2-db-key-pairtoday
     iam:
       withAddonPolicies:
         imageBuilder: true
         awsLoadBalancerController: true
         autoScaler: true
+
 iam:
   withOIDC: true
   serviceAccounts:
@@ -43,6 +44,4 @@ iam:
         name: aws-load-balancer-controller
         namespace: kube-system
       attachPolicyARNs:
-        - arn:aws:iam::AWS_ACCOUNT_ID:policy/AWSLoadBalancerControllerIAMPolicy
-
-
+        - "arn:aws:iam::322814812989:policy/AWSLoadBalancerControllerIAMPolicy"
