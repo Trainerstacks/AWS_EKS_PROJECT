@@ -1,25 +1,22 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-
 metadata:
   name: spring-test-cluster
   region: ap-southeast-2
   version: "1.30"
-
 vpc:
   id: "vpc-0d8fd2a1689802dad"
   subnets:
     private:
-      ap-south-1a:
+      ap-southeast-2a:
         id: "subnet-058c6387214018313"
-      ap-south-1b:
+      ap-southeast-2b:
         id: "subnet-0913ef7a160140349"
     public:
-      ap-south-1a:
+      ap-southeast-2a:
         id: "subnet-0ee25220639880092"
-      ap-south-1b:
+      ap-southeast-2b:
         id: "subnet-0dfbaa9dfae282d68"
-
 managedNodeGroups:
   - name: ng-1
     labels: { role: worker }
@@ -36,7 +33,6 @@ managedNodeGroups:
         imageBuilder: true
         awsLoadBalancerController: true
         autoScaler: true
-
 iam:
   withOIDC: true
   serviceAccounts:
