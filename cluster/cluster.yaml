@@ -27,7 +27,7 @@ managedNodeGroups:
     privateNetworking: true
     ssh:
       allow: true
-      publicKeyName: ec2-db-key-pair
+      publicKeyName: ec2-db-key-pair123
     iam:
       withAddonPolicies:
         imageBuilder: true
