@@ -5,18 +5,18 @@ metadata:
   region: ap-southeast-2
   version: "1.30"
 vpc:
-  id: "vpc-096e661efd34d9ac4"
+  id: "vpc-078b05e53f3cbf6e5"
   subnets:
     private:
       ap-southeast-2a:
-        id: "subnet-0e056fe03f16993cb"
+        id: "subnet-0aefab085a9caeb31"
       ap-southeast-2b:
-        id: "subnet-08cc80b07a00ffe9b"
+        id: "subnet-065810f858b83e9d0"
     public:
       ap-southeast-2a:
-        id: "subnet-071b0f7d4de2d685e"
+        id: "subnet-0984ce60e28a9ceca"
       ap-southeast-2b:
-        id: "subnet-02a50b4f61abb324c"
+        id: "subnet-041a5fb23de041ab6"
 managedNodeGroups:
   - name: ng-1
     labels: { role: worker }
@@ -40,4 +40,4 @@ iam:
         name: aws-load-balancer-controller
         namespace: kube-system
       attachPolicyARNs:
-        - "arn:aws:iam::258975980349:policy/AWSLoadBalancerControllerIAMPolicy"
+        - "arn:aws:iam::078238935473:policy/AWSLoadBalancerControllerIAMPolicy"
