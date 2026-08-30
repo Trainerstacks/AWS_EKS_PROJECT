@@ -3,7 +3,7 @@ kind: ClusterConfig
 metadata:
   name: spring-test-cluster
   region: ap-southeast-2
-  version: "1.30"
+  version: "1.36"
 vpc:
   id: "vpc-0702a96dea064ab40"
   subnets:
