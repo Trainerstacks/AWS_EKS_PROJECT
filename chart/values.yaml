@@ -1,6 +1,6 @@
 
 replicaCount: 1
-
+ 
 image:
   repository: aws_account_id.abc.efg.ap-southeast-2.amazonaws.com/springboot-mysql-eks
   pullPolicy: IfNotPresent
