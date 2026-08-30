@@ -15,7 +15,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 mysql:
-  databaseName: test
+  databaseName: ts_training
 
 serviceAccount:
   # Specifies whether a service account should be created
