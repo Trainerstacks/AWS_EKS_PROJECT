@@ -17,6 +17,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "ytchart.fullname" . }}
+                name: {{ include "tschart.fullname" . }}
                 port:
                   number: 8080
