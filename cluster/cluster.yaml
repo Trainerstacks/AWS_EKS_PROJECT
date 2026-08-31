@@ -21,10 +21,10 @@ managedNodeGroups:
   - name: ng-1
     labels: { role: worker }
     instanceType: t3.medium
-    desiredCapacity: 3
-    minSize: 3
-    maxSize: 5
-    privateNetworking: true
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 3
+    privateNetworking: false
     ssh:
       allow: true
       publicKeyName: ec2-db-key-pair123
