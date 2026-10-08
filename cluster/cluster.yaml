@@ -24,7 +24,7 @@ managedNodeGroups:
     desiredCapacity: 1
     minSize: 1
     maxSize: 3
-    privateNetworking: false
+    privateNetworking: true
     ssh:
       allow: true
       publicKeyName: ec2-db-key-pair123
